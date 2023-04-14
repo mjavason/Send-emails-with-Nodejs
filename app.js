@@ -2,10 +2,14 @@ const nodeMailer = require('nodemailer');
 const dotenv = require('dotenv');
 dotenv.config();
 
+//important variables
 let customerName = "Goodnews";
 let comicBookName = "Batman and Catwoman";
 let downloadLink = "https://www.google.com";
 let previewImageLink = "cid:comicImagePreview";
+const emailRecipient = 'orjimichael2240@gmail.com';
+// const emails = ['orjimichael2340@gmail.com', 'm.mail@mail.com'];
+
 
 //The actual email body
 const html2 = `<!DOCTYPE html>
@@ -36,8 +40,6 @@ const html = `
 <img src="cid:comicImagePreview" width="100%" >
 `;
 
-// const emails = ['orjimichael2340@gmail.com', 'm.mail@mail.com'];
-const emailRecipient = 'orjimichael2240@gmail.com';
 
 async function main() {
   //email account setup and login. You need to pass in your emails credentials and thus use this app to control it.
