@@ -1,5 +1,5 @@
 const nodeMailer = require('nodemailer');
-const dotenv = require(dotenv);
+const dotenv = require('dotenv');
 dotenv.config();
 
 let customerName = "Goodnews";
@@ -53,7 +53,7 @@ async function main() {
 
   //This is where the actual email message is built. Things like CC, recipients, attachments and so on are configured here.
   const info = await transporter.sendMail({
-    from: `ComicSpace Inc <${process.env.GMAIL_ADDRESS}>`,
+    from: `ComicSpace <${process.env.GMAIL_ADDRESS}>`,
     to: emailRecipient,
     subject: `${comicBookName} Download Link`,
     html: html2,
